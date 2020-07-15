@@ -5,29 +5,30 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
+/tow-mater-backend/.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/db/*.sqlite3-*
+/tow-mater-backend/db/*.sqlite3
+/tow-mater-backend/db/*.sqlite3-journal
+/tow-mater-backend/db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+/tow-mater-backend/log/*
+/tow-mater-backend/tmp/*
+!/tow-mater-backend/log/.keep
+!/tow-mater-backend/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+/tow-mater-backend/tmp/pids/*
+!/tow-mater-backend/tmp/pids/
+!/tow-mater-backend/tmp/pids/.keep
 
 # Ignore uploaded files in development.
-/storage/*
-!/storage/.keep
-.byebug_history
+/tow-mater-backend/storage/*
+!/tow-mater-backend/storage/.keep
+/tow-mater-backend.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-/config/master.key
+/tow-mater-backend/config/master.key
+
 /tow-mater-backend/.env
