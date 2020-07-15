@@ -16,6 +16,8 @@ gem 'puma', '~> 4.1'
 
 # User control gems
 gem 'devise'
+gem 'devise-jwt'
+gem 'dotenv-rails'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
