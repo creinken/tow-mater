@@ -98,3 +98,210 @@ Migrating to CreateTows (20200717171342)
   [1m[35m (80.5ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-07-17 12:29:26 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silverpyro84/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silverpyro84/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.7ms | Allocations: 479)
+Completed 200 OK in 105ms (Views: 49.0ms | ActiveRecord: 0.0ms | Allocations: 2616)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-17 12:29:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-17 12:29:34 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/silverpyro84/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/silverpyro84/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.0ms | Allocations: 191)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 727)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /home/silverpyro84/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/tows" for ::1 at 2020-07-17 12:31:15 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as HTML
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 113ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 2818)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:32:11 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:32:16 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.1ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 795)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:33:15 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 812)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:33:53 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.1ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 812)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:36:29 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 2.9ms | ActiveRecord: 0.8ms | Allocations: 2357)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:37:16 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:39:12 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:39:49 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 813)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 12:42:07 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 796)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chris"], ["email", "chris@tow.com"], ["created_at", "2020-07-17 17:51:49.332007"], ["updated_at", "2020-07-17 17:51:49.332007"]]
+  [1m[35m (90.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rob"], ["email", "rob@tow.com"], ["created_at", "2020-07-17 17:51:49.429529"], ["updated_at", "2020-07-17 17:51:49.429529"]]
+  [1m[35m (105.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chad"], ["email", "chad@tow.com"], ["created_at", "2020-07-17 17:51:49.542785"], ["updated_at", "2020-07-17 17:51:49.542785"]]
+  [1m[35m (101.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heath"], ["email", "heath@tow.com"], ["created_at", "2020-07-17 17:51:49.652862"], ["updated_at", "2020-07-17 17:51:49.652862"]]
+  [1m[35m (102.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.5ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jo"], ["email", "jo@tow.com"], ["created_at", "2020-07-17 17:51:49.774598"], ["updated_at", "2020-07-17 17:51:49.774598"]]
+  [1m[35m (65.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.6ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amanda"], ["email", "amanda@tow.com"], ["created_at", "2020-07-17 17:51:49.849517"], ["updated_at", "2020-07-17 17:51:49.849517"]]
+  [1m[35m (81.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.7ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Linda"], ["email", "linda@tow.com"], ["created_at", "2020-07-17 17:51:49.940780"], ["updated_at", "2020-07-17 17:51:49.940780"]]
+  [1m[35m (101.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameTowsTypeToTowtype (20200717175317)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "atows" ("id" integer NOT NULL PRIMARY KEY, "tow_type" varchar DEFAULT 'cash call' NOT NULL, "subtype" varchar DEFAULT 'tow' NOT NULL, "driver_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "location_at" varchar DEFAULT NULL, "location_to" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "atows" ("id","tow_type","subtype","driver_id","dispatcher_id","location_at","location_to","created_at","updated_at")
+                     SELECT "id","type","subtype","driver_id","dispatcher_id","location_at","location_to","created_at","updated_at" FROM "tows"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "tows"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tows" ("id" integer NOT NULL PRIMARY KEY, "tow_type" varchar DEFAULT 'cash call' NOT NULL, "subtype" varchar DEFAULT 'tow' NOT NULL, "driver_id" integer DEFAULT NULL, "dispatcher_id" integer DEFAULT NULL, "location_at" varchar DEFAULT NULL, "location_to" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "tows" ("id","tow_type","subtype","driver_id","dispatcher_id","location_at","location_to","created_at","updated_at")
+                     SELECT "id","tow_type","subtype","driver_id","dispatcher_id","location_at","location_to","created_at","updated_at" FROM "atows"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "atows"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200717175317"]]
+  [1m[35m (70.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.4ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chris"], ["email", "chris@tow.com"], ["created_at", "2020-07-17 17:55:23.639655"], ["updated_at", "2020-07-17 17:55:23.639655"]]
+  [1m[35m (111.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (1.8ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rob"], ["email", "rob@tow.com"], ["created_at", "2020-07-17 17:55:23.757891"], ["updated_at", "2020-07-17 17:55:23.757891"]]
+  [1m[35m (99.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chad"], ["email", "chad@tow.com"], ["created_at", "2020-07-17 17:55:23.866142"], ["updated_at", "2020-07-17 17:55:23.866142"]]
+  [1m[35m (128.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDriver Create (0.5ms)[0m  [1m[32mINSERT INTO "drivers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Heath"], ["email", "heath@tow.com"], ["created_at", "2020-07-17 17:55:23.999781"], ["updated_at", "2020-07-17 17:55:23.999781"]]
+  [1m[35m (115.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.4ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jo"], ["email", "jo@tow.com"], ["created_at", "2020-07-17 17:55:24.130888"], ["updated_at", "2020-07-17 17:55:24.130888"]]
+  [1m[35m (71.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.5ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Amanda"], ["email", "amanda@tow.com"], ["created_at", "2020-07-17 17:55:24.210087"], ["updated_at", "2020-07-17 17:55:24.210087"]]
+  [1m[35m (81.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDispatcher Create (0.4ms)[0m  [1m[32mINSERT INTO "dispatchers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Linda"], ["email", "linda@tow.com"], ["created_at", "2020-07-17 17:55:24.300576"], ["updated_at", "2020-07-17 17:55:24.300576"]]
+  [1m[35m (104.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTow Create (0.3ms)[0m  [1m[32mINSERT INTO "tows" ("driver_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 5], ["dispatcher_id", 4], ["created_at", "2020-07-17 17:55:24.468639"], ["updated_at", "2020-07-17 17:55:24.468639"]]
+  [1m[35m (80.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTow Create (0.5ms)[0m  [1m[32mINSERT INTO "tows" ("driver_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["driver_id", 7], ["dispatcher_id", 4], ["created_at", "2020-07-17 17:55:24.555677"], ["updated_at", "2020-07-17 17:55:24.555677"]]
+  [1m[35m (90.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTow Create (0.4ms)[0m  [1m[32mINSERT INTO "tows" ("tow_type", "driver_id", "dispatcher_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["tow_type", "LPD"], ["driver_id", 6], ["dispatcher_id", 5], ["created_at", "2020-07-17 17:55:24.655660"], ["updated_at", "2020-07-17 17:55:24.655660"]]
+  [1m[35m (93.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/tows" for ::1 at 2020-07-17 12:55:48 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.4ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 1.8ms | Allocations: 8774)
+
+

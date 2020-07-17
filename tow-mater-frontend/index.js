@@ -27,7 +27,7 @@ class Page {
             return response.json()
         })
         .then(function(json){
-            self.buildSelf();
+            console.log(json);
         })
     }
 
@@ -124,7 +124,7 @@ const loginPage = new Page("http://localhost:3000/login", [{div: {
                                                                 ]}
                                                             }]);
 
-const dispatchPage = new Page("http://localhost:3000/", [{div: {
+const dispatchPage = new Page("http://localhost:3000/tows", [{div: {
                                                             id: "dispatch-div",
                                                             class: "container",
                                                             children: [
@@ -138,5 +138,6 @@ const dispatchPage = new Page("http://localhost:3000/", [{div: {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    loginPage.buildSelf();
+    dispatchPage.buildSelf();
+    dispatchPage.fetchURL();
 });

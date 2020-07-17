@@ -9,5 +9,6 @@ Rails.application.routes.draw do
                          sessions: 'sessions',
                          registrations: 'registrations'
                      }
+    resources :tows
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

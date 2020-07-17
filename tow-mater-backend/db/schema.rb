@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_17_171342) do
+ActiveRecord::Schema.define(version: 2020_07_17_175317) do
 
   create_table "dispatchers", force: :cascade do |t|
     t.string "name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_07_17_171342) do
   end
 
   create_table "tows", force: :cascade do |t|
-    t.string "type", default: "cash call", null: false
+    t.string "tow_type", default: "cash call", null: false
     t.string "subtype", default: "tow", null: false
     t.integer "driver_id"
     t.integer "dispatcher_id"
