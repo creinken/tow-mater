@@ -1,0 +1,2 @@
+class Tow < ApplicationRecord
+end
