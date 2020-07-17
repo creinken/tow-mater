@@ -21,6 +21,16 @@ class Page {
         this.elements = elements
     }
 
+    fetchURL() {
+        fetch(this.url)
+        .then(function(response) {
+            return response.json()
+        })
+        .then(function(json){
+            self.buildSelf();
+        })
+    }
+
     buildSelf() {
         // elements structured as such
         // ele = [{tag: { attr: "attrValue", attr2: "attr2Value"...},
