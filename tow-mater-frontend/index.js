@@ -37,7 +37,6 @@ class Page {
                 function attrCreator(obj, element) {
                     for (const [attr, attrValue] of Object.entries(obj)) {
                         if (htmlTags.indexOf(attr) >= true) {
-                            console.log(attr);
                             let newElement = document.createElement(attr);
                             element.appendChild(newElement);
                             attrCreator(attrValue, newElement);
@@ -78,19 +77,56 @@ const loginPage = new Page("http://localhost:3000/login", [{div: {
                                                                 id: "login-div",
                                                                 class: "container",
                                                                 children: [
-                                                                    {ul: {
-                                                                        id: "test-ul",
-                                                                        class: "test",
+                                                                    {h2: {
+                                                                        innerText: "Please Login Below"}
+                                                                    },
+                                                                    {form: {
+                                                                        id: "login-form",
+                                                                        class: "form",
+                                                                        action: "http://localhost:3000/login",
+                                                                        method: "POST",
                                                                         children: [
-                                                                            {li: {
-                                                                                class: "test-li",
-                                                                                innerText: "list item 1"}
+                                                                            {label: {
+                                                                                for: "user_name",
+                                                                                innerText: "Username: "}
                                                                             },
-                                                                            {li: {
-                                                                                class: "test-li",
-                                                                                innerText: "list item 2"}
-                                                                            }
+                                                                            {input: {
+                                                                                name: "user_name"}
+                                                                            },
+                                                                            {br: {}
+                                                                            },
+                                                                            {label: {
+                                                                                for: "password",
+                                                                                innerText: "Password: "}
+                                                                            },
+                                                                            {input: {
+                                                                                name: "password",
+                                                                                type: "password"}
+                                                                            },
+                                                                            {br: {}
+                                                                            },
+                                                                            {input: {
+                                                                                type: "submit",
+                                                                                innerText: "Login"
+                                                                            }}
                                                                         ]}
                                                                     }
                                                                 ]}
                                                             }]);
+
+const dispatchPage = new Page("http://localhost:3000/", [{div: {
+                                                            id: "dispatch-div",
+                                                            class: "container",
+                                                            children: [
+                                                                {h2: {
+                                                                innerText: "Dispatch Tow Log"}
+                                                                }
+                                                            ]}
+                                                        }]
+                                                    );
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    loginPage.buildSelf();
+});
