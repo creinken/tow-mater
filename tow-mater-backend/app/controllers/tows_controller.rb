@@ -6,9 +6,13 @@ class TowsController < ApplicationController
     end
 
     def create
+        binding.pry
         driver = Driver.find_or_create_by(name: params[:tow][:driver])
         dispatcher = Dispatcher.find_or_create_by(name: params[:tow][:dispatcher])
-        tow = Tow.create(tow_params, driver: driver, dispatcher: dispatcher)
+        tow = Tow.create(tow_params)
+        tow.driver = driver
+        tow.dispatcher = dispatcher
+        tow.save
 
         render json: tow, include: [:driver, :dispatcher]
     end

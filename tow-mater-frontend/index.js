@@ -110,6 +110,13 @@ class LogPage extends Page {
             }
         })
     }
+
+    createTow(e){
+        console.log(e);
+        console.log('form submitted');
+        alert('form submitted!');
+        e.preventDefault();
+    }
 }
 
 const loginPage = new Page("http://localhost:3000/login", [{div: {
@@ -166,8 +173,6 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                         {form: {
                                                                             id: "dispatch-form",
                                                                             class: "form",
-                                                                            action: "http://localhost:3000/tows",
-                                                                            method: "POST",
                                                                             children: [
                                                                                 {label: {
                                                                                     for: "tow_type",
@@ -213,7 +218,34 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                     type: "submit",
                                                                                     innerText: "Submit"
                                                                                 }}
-                                                                            ]}
+                                                                            ],
+                                                                            listener: {
+                                                                                type: "submit",
+                                                                                cbFunc: function(e){
+                                                                                    fetch("http://localhost:3000/tows", {
+                                                                                        method: "POST",
+                                                                                        headers: {
+                                                                                            "Content-Type": "application/json",
+                                                                                            "Accept": "application/json"
+                                                                                        },
+                                                                                        body: JSON.stringify({
+                                                                                            tow: {
+                                                                                                tow_type: "",
+                                                                                                subtype: "",
+                                                                                                driver: "",
+                                                                                                dispatcher: ""
+                                                                                            }
+                                                                                        })
+                                                                                    })
+                                                                                    .then(function(res) {
+                                                                                        return res.json();
+                                                                                    })
+                                                                                    .then(function(json) {
+                                                                                        console.log(json);
+                                                                                    })
+                                                                                    e.preventDefault();
+                                                                                }}
+                                                                            }
                                                                         },
                                                                         {hr: {}
                                                                         },
