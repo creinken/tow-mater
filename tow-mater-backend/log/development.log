@@ -305,3 +305,567 @@ Processing by TowsController#index as */*
 Completed 200 OK in 23ms (Views: 17.4ms | ActiveRecord: 1.8ms | Allocations: 8774)
 
 
+Started GET "/tows" for ::1 at 2020-07-17 13:59:50 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (17.5ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (14.4ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (12.4ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 259ms (Views: 185.7ms | ActiveRecord: 49.8ms | Allocations: 26870)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:03:06 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 38ms (Views: 37.1ms | ActiveRecord: 1.0ms | Allocations: 7748)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:06:26 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 1.0ms | Allocations: 7745)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:06:49 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 1.4ms | Allocations: 7745)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:07:15 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.7ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.6ms | Allocations: 7745)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:08:42 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 1.1ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:11:04 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 1.0ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:17:37 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 1.6ms | Allocations: 7782)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:18:39 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.1ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 1.1ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:20:05 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 1.2ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-17 14:21:27 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 1.2ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 16:38:16 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.0ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 18:45:48 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (20.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (15.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (11.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 217ms (Views: 149.8ms | ActiveRecord: 49.9ms | Allocations: 26314)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 18:54:16 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.5ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.7ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 119ms (Views: 106.7ms | ActiveRecord: 6.3ms | Allocations: 26316)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:28:32 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.7ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 94ms (Views: 83.9ms | ActiveRecord: 4.9ms | Allocations: 26316)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:29:20 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.4ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 1.6ms | Allocations: 7745)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:37:14 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.8ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.4ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 2.2ms | Allocations: 7795)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:37:32 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.4ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (1.7ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 65ms (Views: 61.0ms | ActiveRecord: 3.0ms | Allocations: 7748)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:40:22 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 1.4ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:41:09 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 7745)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:42:03 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.1ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 1.0ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:43:58 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.2ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:46:07 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 1.1ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:46:59 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.9ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 21:59:50 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.5ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.7ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.4ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 2.5ms | Allocations: 7782)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 22:00:49 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 24.7ms | ActiveRecord: 1.1ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 22:22:23 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.1ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 1.2ms | Allocations: 7782)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 22:23:21 -0500
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.2ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.1ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 1.1ms | Allocations: 7726)
+
+
+Started GET "/tows" for ::1 at 2020-07-18 22:40:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TowsController#index as */*
+  [1m[36mTow Load (0.3ms)[0m  [1m[34mSELECT "tows".* FROM "tows"[0m
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.3ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.3ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mCACHE Dispatcher Load (0.0ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDriver Load (0.2ms)[0m  [1m[34mSELECT "drivers".* FROM "drivers" WHERE "drivers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+  [1m[36mDispatcher Load (0.2ms)[0m  [1m[34mSELECT "dispatchers".* FROM "dispatchers" WHERE "dispatchers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tows_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 1.4ms | Allocations: 7782)
+
+

@@ -22,13 +22,12 @@ class Page {
     }
 
     fetchURL() {
-        fetch(this.url)
+        let resJson = fetch(this.url)
         .then(function(response) {
             return response.json()
-        })
-        .then(function(json){
-            console.log(json);
-        })
+        });
+
+        return resJson;
     }
 
     buildSelf() {
@@ -38,48 +37,64 @@ class Page {
         // get or create elements needed for page content
         let main = document.getElementById('main-content');
 
-        // itterate over object of elements
-        function elementPlacer(elements, parentElement) {
-            for (const idx of elements) {
-                // create element
-                attrCreator(idx, parentElement);
-
-                function attrCreator(obj, element) {
-                    for (const [attr, attrValue] of Object.entries(obj)) {
-                        if (htmlTags.indexOf(attr) >= true) {
-                            let newElement = document.createElement(attr);
-                            element.appendChild(newElement);
-                            attrCreator(attrValue, newElement);
-                        } else {
-                            switch (attr) {
-                                case "class":
-                                    element.classList.add(attrValue);
-                                    break;
-                                case "listener":
-                                    let type = attrValue.type,
-                                        cbFunc = attrValue.cbFunc;
-                                    element.addEventListener(type, cbFunc);
-                                    break;
-                                case "children":
-                                    elementPlacer(attrValue, element)
-                                    break;
-                                case "innerText":
-                                    element.innerText = attrValue;
-                                    break;
-                                default:
-                                    element.setAttribute(attr, attrValue);
-                            }
-                        }
-                    }
-                }
-            }
-        }
 
         // wipe main's content and load it with this page's content
         while (main.firstChild) {
             main.removeChild(main.firstChild)
         }
-        elementPlacer(this.elements, main);
+        this.elementPlacer(this.elements, main);
+    }
+
+    elementPlacer(elements, parentElement) {
+        for (const idx of elements) {
+            // create element
+            this.attrCreator(idx, parentElement);
+
+
+        }
+    }
+
+    attrCreator(obj, element) {
+        for (const [attr, attrValue] of Object.entries(obj)) {
+            if (htmlTags.indexOf(attr) >= true) {
+                let newElement = document.createElement(attr);
+                element.appendChild(newElement);
+                this.attrCreator(attrValue, newElement);
+            } else {
+                switch (attr) {
+                    case "class":
+                        element.classList.add(attrValue);
+                        break;
+                    case "listener":
+                        let type = attrValue.type,
+                            cbFunc = attrValue.cbFunc;
+                        element.addEventListener(type, cbFunc);
+                        break;
+                    case "children":
+                        this.elementPlacer(attrValue, element)
+                        break;
+                    case "innerText":
+                        element.innerText = attrValue;
+                        break;
+                    default:
+                        element.setAttribute(attr, attrValue);
+                }
+            }
+        }
+    }
+}
+
+class LogPage extends Page {
+    displayLog() {
+        let towLog = this.fetchURL(),
+            logTable = document.getElementById('tow-log');
+        // console.log(towLog);
+        towLog.then((json) => {
+            for (const i of json) {
+                this.attrCreator({tr: {class: "row", children: [{td: {innerText: `${i.tow_type}`}}, {td: {innerText: `${i.subtype}`}}, {td: {innerText: `${i.driver.name}`}}, {td: {innerText: `${i.dispatcher.name}`}}]}}, logTable)
+                console.log(i);
+            }
+        })
     }
 }
 
@@ -124,12 +139,79 @@ const loginPage = new Page("http://localhost:3000/login", [{div: {
                                                                 ]}
                                                             }]);
 
-const dispatchPage = new Page("http://localhost:3000/tows", [{div: {
+const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                             id: "dispatch-div",
                                                             class: "container",
                                                             children: [
                                                                 {h2: {
-                                                                innerText: "Dispatch Tow Log"}
+                                                                    innerText: "Dispatch Tow Log"}
+                                                                },
+                                                                {div: {
+                                                                    class: "container",
+                                                                    children: [
+                                                                        {form: {
+                                                                            id: "dispatch-form",
+                                                                            class: "form",
+                                                                            action: "http://localhost:3000/tows",
+                                                                            method: "POST",
+                                                                            children: [
+                                                                                {label: {
+                                                                                    for: "tow_type",
+                                                                                    innerText: "Type: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    name: "tows[tow_type]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "subtype",
+                                                                                    innerText: "Subtype: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    name: "tows[subtype]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {input: {
+                                                                                    type: "submit",
+                                                                                    innerText: "Submit"
+                                                                                }}
+                                                                            ]}
+                                                                        },
+                                                                        {hr: {}
+                                                                        },
+                                                                        {table: {
+                                                                            id: "log-table",
+                                                                            name: "tow log",
+                                                                            children: [
+                                                                                {thead: {
+                                                                                    children: [
+                                                                                        {tr: {
+                                                                                            class: "table-header",
+                                                                                            children: [
+                                                                                                {th: {
+                                                                                                    innerText: "type"}
+                                                                                                },
+                                                                                                {th: {
+                                                                                                    innerText: "sub type"}
+                                                                                                },
+                                                                                                {th: {
+                                                                                                    innerText: "driver"}
+                                                                                                },
+                                                                                                {th: {
+                                                                                                    innerText: "dispatcher"}
+                                                                                                }
+                                                                                            ]}
+                                                                                        }
+                                                                                    ]
+                                                                                }},
+                                                                                {tbody: {
+                                                                                    id: "tow-log"
+                                                                                }}
+                                                                            ]}
+                                                                        }
+                                                                    ]}
                                                                 }
                                                             ]}
                                                         }]
@@ -139,5 +221,5 @@ const dispatchPage = new Page("http://localhost:3000/tows", [{div: {
 
 document.addEventListener('DOMContentLoaded', function() {
     dispatchPage.buildSelf();
-    dispatchPage.fetchURL();
+    dispatchPage.displayLog();
 });
