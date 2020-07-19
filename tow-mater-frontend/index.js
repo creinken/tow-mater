@@ -88,11 +88,25 @@ class LogPage extends Page {
     displayLog() {
         let towLog = this.fetchURL(),
             logTable = document.getElementById('tow-log');
-        // console.log(towLog);
         towLog.then((json) => {
             for (const i of json) {
-                this.attrCreator({tr: {class: "row", children: [{td: {innerText: `${i.tow_type}`}}, {td: {innerText: `${i.subtype}`}}, {td: {innerText: `${i.driver.name}`}}, {td: {innerText: `${i.dispatcher.name}`}}]}}, logTable)
-                console.log(i);
+                this.attrCreator({tr:
+                                    {class: "row",
+                                    children: [
+                                        {td:
+                                            {innerText: `${i.tow_type}`}
+                                        },
+                                        {td:
+                                            {innerText: `${i.subtype}`}
+                                        },
+                                        {td:
+                                            {innerText: `${i.driver.name}`}
+                                        },
+                                        {td:
+                                            {innerText: `${i.dispatcher.name}`}
+                                        }
+                                    ]}
+                                }, logTable);
             }
         })
     }
@@ -160,7 +174,8 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                     innerText: "Type: "}
                                                                                 },
                                                                                 {input: {
-                                                                                    name: "tows[tow_type]"}
+                                                                                    id: "tow_tow_type",
+                                                                                    name: "tow[tow_type]"}
                                                                                 },
                                                                                 {br: {}
                                                                                 },
@@ -169,7 +184,28 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                     innerText: "Subtype: "}
                                                                                 },
                                                                                 {input: {
-                                                                                    name: "tows[subtype]"}
+                                                                                    id: "tow_subtype",
+                                                                                    name: "tow[subtype]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "tow_driver",
+                                                                                    innerText: "Driver: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_driver",
+                                                                                    name: "tow[driver]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "tow_dispatcher",
+                                                                                    innerText: "Dispatcher: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_dispatcher",
+                                                                                    name: "tow[dispatcher]"}
                                                                                 },
                                                                                 {br: {}
                                                                                 },
@@ -188,7 +224,7 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                 {thead: {
                                                                                     children: [
                                                                                         {tr: {
-                                                                                            class: "table-header",
+                                                                                            class: "row",
                                                                                             children: [
                                                                                                 {th: {
                                                                                                     innerText: "type"}

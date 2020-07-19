@@ -1,4 +1,23 @@
-table, th, td {
+table, th, td{
   border: 1px solid black;
-  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+thead, tbody, tr{
+  margin: 0;
+  padding: 0;
+  width: inherit;
+}
+
+th, td{
+  width: 25%;
+}
+
+th{
+  text-align: center;
+}
+
+table {
+  width: inherit;
 }
