@@ -222,6 +222,11 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                             listener: {
                                                                                 type: "submit",
                                                                                 cbFunc: function(e){
+                                                                                    let tow = document.getElementById('tow_tow_type'),
+                                                                                        towSubtype = document.getElementById('tow_subtype'),
+                                                                                        towDriver = document.getElementById('tow_driver'),
+                                                                                        towDispatcher = document.getElementById('tow_dispatcher'),
+                                                                                        logTable = document.getElementById('tow-log');;
                                                                                     fetch("http://localhost:3000/tows", {
                                                                                         method: "POST",
                                                                                         headers: {
@@ -230,19 +235,39 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                         },
                                                                                         body: JSON.stringify({
                                                                                             tow: {
-                                                                                                tow_type: "",
-                                                                                                subtype: "",
-                                                                                                driver: "",
-                                                                                                dispatcher: ""
+                                                                                                tow_type: `${tow.value}`,
+                                                                                                subtype: `${towSubtype.value}`,
+                                                                                                driver: `${towDriver.value}`,
+                                                                                                dispatcher: `${towDispatcher.value}`
                                                                                             }
                                                                                         })
                                                                                     })
                                                                                     .then(function(res) {
                                                                                         return res.json();
                                                                                     })
-                                                                                    .then(function(json) {
-                                                                                        console.log(json);
+                                                                                    .then((json) => {
+                                                                                        dispatchPage.attrCreator({tr:
+                                                                                                            {class: "row",
+                                                                                                            children: [
+                                                                                                                {td:
+                                                                                                                    {innerText: `${json.tow_type}`}
+                                                                                                                },
+                                                                                                                {td:
+                                                                                                                    {innerText: `${json.subtype}`}
+                                                                                                                },
+                                                                                                                {td:
+                                                                                                                    {innerText: `${json.driver.name}`}
+                                                                                                                },
+                                                                                                                {td:
+                                                                                                                    {innerText: `${json.dispatcher.name}`}
+                                                                                                                }
+                                                                                                            ]}
+                                                                                                        }, logTable);
                                                                                     })
+                                                                                    tow.value = "";
+                                                                                    towSubtype.value = "";
+                                                                                    towDriver.value = "";
+                                                                                    towDispatcher.value = "";
                                                                                     e.preventDefault();
                                                                                 }}
                                                                             }
