@@ -110,13 +110,6 @@ class LogPage extends Page {
             }
         })
     }
-
-    createTow(e){
-        console.log(e);
-        console.log('form submitted');
-        alert('form submitted!');
-        e.preventDefault();
-    }
 }
 
 const loginPage = new Page("http://localhost:3000/login", [{div: {
@@ -245,7 +238,7 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                     .then(function(res) {
                                                                                         return res.json();
                                                                                     })
-                                                                                    .then((json) => {
+                                                                                    .then(function(json) {
                                                                                         dispatchPage.attrCreator({tr:
                                                                                                             {class: "row",
                                                                                                             children: [
