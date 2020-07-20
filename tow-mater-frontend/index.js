@@ -21,8 +21,8 @@ class Page {
         this.elements = elements
     }
 
-    fetchURL() {
-        let resJson = fetch(this.url)
+    fetchURL(url = this.url) {
+        let resJson = fetch(url)
         .then(function(response) {
             return response.json()
         });
@@ -84,6 +84,33 @@ class Page {
     }
 }
 
+class EditPage extends Page {
+    constructor(url, elements, id) {
+        super(url, elements);
+        this.id = id;
+    }
+
+    fillForm() {
+        let tow = document.getElementById('tow_tow_type'),
+            towSubtype = document.getElementById('tow_subtype'),
+            towDriver = document.getElementById('tow_driver'),
+            towDispatcher = document.getElementById('tow_dispatcher'),
+            towId = document.getElementById('tow_id'),
+            editURL = `http://localhost:3000/tows/${this.id}/edit`;
+        fetch(editURL)
+        .then( function(res) {
+            return res.json()
+        })
+        .then( function(json) {
+            towId.value = json.id;
+            tow.value = json.tow_type;
+            towSubtype.value = json.subtype;
+            towDriver.value = json.driver.name;
+            towDispatcher.value = json.dispatcher.name;
+        });
+    }
+}
+
 class LogPage extends Page {
     displayLog() {
         let towLog = this.fetchURL(),
@@ -93,6 +120,22 @@ class LogPage extends Page {
                 this.attrCreator({tr:
                                     {class: "row",
                                     children: [
+                                        {td:
+                                            {children: [
+                                                {button:
+                                                    {listener: {
+                                                        type: "click",
+                                                        cbFunc: function(e){
+                                                            editTowPage.id = i.id;
+                                                            editTowPage.buildSelf();
+                                                            editTowPage.fillForm();
+                                                        }
+                                                    },
+                                                    innerText: "Edit"
+                                                    }
+                                                }
+                                            ]}
+                                        },
                                         {td:
                                             {innerText: `${i.tow_type}`}
                                         },
@@ -243,6 +286,9 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                                             {class: "row",
                                                                                                             children: [
                                                                                                                 {td:
+                                                                                                                    {innerText: `${json.id}`}
+                                                                                                                },
+                                                                                                                {td:
                                                                                                                     {innerText: `${json.tow_type}`}
                                                                                                                 },
                                                                                                                 {td:
@@ -276,6 +322,9 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                                                         {tr: {
                                                                                             class: "row",
                                                                                             children: [
+                                                                                                {th:
+                                                                                                    {innerText: "Id"}
+                                                                                                },
                                                                                                 {th: {
                                                                                                     innerText: "type"}
                                                                                                 },
@@ -303,6 +352,115 @@ const dispatchPage = new LogPage("http://localhost:3000/tows", [{div: {
                                                         }]
                                                     );
 
+const editTowPage = new EditPage("http://localhost:3000/tows", [{div: {
+                                                            id: "dispatch-div",
+                                                            class: "container",
+                                                            children: [
+                                                                {h2: {
+                                                                    innerText: "Dispatch Tow Log"}
+                                                                },
+                                                                {div: {
+                                                                    class: "container",
+                                                                    children: [
+                                                                        {form: {
+                                                                            id: "dispatch-form",
+                                                                            class: "form",
+                                                                            children: [
+                                                                                {label: {
+                                                                                    for: "id",
+                                                                                    innerText: "Id: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_id",
+                                                                                    name: "tow[id]"}
+                                                                                },
+                                                                                {br: {}},
+                                                                                {label: {
+                                                                                    for: "tow_type",
+                                                                                    innerText: "Type: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_tow_type",
+                                                                                    name: "tow[tow_type]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "subtype",
+                                                                                    innerText: "Subtype: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_subtype",
+                                                                                    name: "tow[subtype]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "tow_driver",
+                                                                                    innerText: "Driver: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_driver",
+                                                                                    name: "tow[driver]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {label: {
+                                                                                    for: "tow_dispatcher",
+                                                                                    innerText: "Dispatcher: "}
+                                                                                },
+                                                                                {input: {
+                                                                                    id: "tow_dispatcher",
+                                                                                    name: "tow[dispatcher]"}
+                                                                                },
+                                                                                {br: {}
+                                                                                },
+                                                                                {input: {
+                                                                                    type: "submit",
+                                                                                    innerText: "Submit"
+                                                                                }}
+                                                                            ],
+                                                                            listener: {
+                                                                                type: "submit",
+                                                                                cbFunc: function(e){
+                                                                                    let tow = document.getElementById('tow_tow_type'),
+                                                                                        towSubtype = document.getElementById('tow_subtype'),
+                                                                                        towDriver = document.getElementById('tow_driver'),
+                                                                                        towDispatcher = document.getElementById('tow_dispatcher'),
+                                                                                        logTable = document.getElementById('tow-log'),
+                                                                                        towId = document.getElementById('tow_id');
+                                                                                    fetch(`http://localhost:3000/tows/${towId.value}`, {
+                                                                                        method: "PATCH",
+                                                                                        headers: {
+                                                                                            "Content-Type": "application/json",
+                                                                                            "Accept": "application/json"
+                                                                                        },
+                                                                                        body: JSON.stringify({
+                                                                                            tow: {
+                                                                                                tow_type: `${tow.value}`,
+                                                                                                subtype: `${towSubtype.value}`,
+                                                                                                driver: `${towDriver.value}`,
+                                                                                                dispatcher: `${towDispatcher.value}`
+                                                                                            }
+                                                                                        })
+                                                                                    })
+                                                                                    .then(function(res) {
+                                                                                        return res.json();
+                                                                                    })
+                                                                                    .then(function(json) {
+                                                                                        console.log(json.message);
+                                                                                        dispatchPage.buildSelf();
+                                                                                        dispatchPage.displayLog();
+                                                                                    })
+                                                                                    e.preventDefault();
+                                                                                }}
+                                                                            }
+                                                                        }]
+                                                                    }}
+                                                                ]
+                                                            }
+                                                        }
+                                                    ], 1);
 
 
 document.addEventListener('DOMContentLoaded', function() {

@@ -15,13 +15,19 @@ class TowsController < ApplicationController
         render json: tow, include: [:driver, :dispatcher]
     end
 
+    def edit
+        tow = Tow.find_by(id: params[:id])
+
+        render json: tow, include: [:driver, :dispatcher]
+    end
+
     def update
         tow = Tow.find_by(id: params[:id])
         tow.driver = @driver
         tow.dispatcher = @dispatcher
         tow.update(tow_params)
-        
-        render json: {:message => {"update successful"}}
+
+        render json: { message: "update successful"}
     end
 
     private
