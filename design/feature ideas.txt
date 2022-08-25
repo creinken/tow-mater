@@ -1,0 +1,105 @@
+towbook
+
+Calls per month
+250
+250
+500
+1,000
+1,500[1]
+Unlimited User Accounts
+Mobile Apps
+Commission Tracking
+Photo Uploads
+Account Statements
+Reports
+Priority Call Text Alert
+Square Integration
+Impound Management
+Automatic Impound Letters & State Forms
+Digital Dispatching
+Automated Email Call Processing
+Automatic Address Completion
+Call History Tracking
+Tow Out
+Private Property Features
+Motor Club Direct Billing & Payment Importing
+Mapping & GPS Tracking
+Automatic Mileage Calculations
+Request Customer Location
+QuickBooks Integration
+Lock & Audit Calls
+User Check In
+Advanced Notification Service
+Customer Portal
+Multi-Company Support
+Vehicle Locator
+Quotes
+Multiple Addresses
+Vehicle Damage Forms
+Accident Reports
+Pre-Trip Inspection Management
+Video Uploads
+Call Chat
+Call & Driver Map Replay
+Real Time Customer Updates
+Customer Satisfaction Surveys
+Driver Ratings
+Predicted Call Arrival Times
+Dispatch Calls to Subcontractors
+Auction Manager Solution
+Auto Accept Digital Offers
+COMING SOON
+Private Property Stickering
+COMING SOON
+Private Property Parking Permits
+COMING SOON
+AutoDataDirect Integration
+
+
+
+Omadi
+
+Save Time
+Eliminate Paper Tickets
+Pull Quick Reports on Payroll & Commissions
+Digital Dispatch
+Plate-to-VIN Decoding
+Quickbooks Integration Desktop or Online
+Auto Data Direct (ADD) Integration - Get DMV, Lien Info, & Send Letters
+Omadi Distance & Route Calculations
+Customizable Reporting
+Time Tracking for Employees
+
+Make Money
+Accounts Receivable
+Client Portal {For Account / PPI/ Police Tows}
+CRM Functionality
+Productivity & Efficiency Reports
+Integrations with Motorclubs
+In-App Payment Processing
+Create Custom Invoices
+Integrated with IAA
+Omadi Network (O.N.) Integration
+
+Reduce Risk
+Time & Geo Stamped Photos
+Vehicle Condition Reports
+Digital Signature in App
+Track Contracts Easily
+Equipment Inspections for Pre & Post Shift
+Fleet Maintenance Reports
+Do Not Tow List
+Easy Property & Account Rule Tracking
+Automated Storage & Tow Fee Calculator
+
+VIN & DMV Lookup
+Lien Processing
+LPR
+Payment Processing
+Mobile Impound Release
+VSF Management
+Parking Violation Detection (time-based and walk offs)
+Client Portal
+Permit Management
+Custom Storage Calculations
+Driver Commissions
