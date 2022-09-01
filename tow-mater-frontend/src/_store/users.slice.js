@@ -17,7 +17,7 @@ function createInitialState() {
 }
 
 function createExtraActions() {
-    const baseUrl = '${process.env.TOW_MATER_API_URL}/users';
+    const baseUrl = `${process.env.TOW_MATER_API_URL}/users`;
 
     return {
         getAll: getAll()
@@ -25,7 +25,7 @@ function createExtraActions() {
 
     function getAll() {
         return createAsyncThunk(
-            '${name}/getAll',
+            `${name}/getAll`,
             async () => await fetchWrapper.get(baseUrl)
         );
     }

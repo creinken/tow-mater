@@ -22,7 +22,7 @@ function authHeader(url) {
     const isLoggedIn = !!token;
     const isApiUrl = url.startsWith(process.env.TOW_MATER_API_URL);
     if (isLoggedIn && isApiUrl) {
-        return { Authorization: 'Bearer ${token}' };
+        return { Authorization: `Bearer ${token}` };
     } else {
         return {};
     }
